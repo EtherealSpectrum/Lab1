@@ -4,22 +4,32 @@
  Author      : Nikitas K.
  Version     :
  Copyright   : MIT License
- Description : Hello World in C, Ansi-style
+ Description :
  ============================================================================
  */
 
 #include <stdio.h>
 #include <stdlib.h>
+#define TOTAL_INPUTS 3
 
 int main(void) {
-	int i, number, sum = 0;
 
-	for (i = 0; i < 10; i++) {
+	int number, sum = 0;
+	double average = 0;
+
+	for (int i = 0; i < TOTAL_INPUTS; i++) {
+		printf("Insert a number: ");
 		scanf("%d", &number);
-		sum += number;
+		average += number;
+
+		if (number > 0)
+			sum += number;
 	}
-	printf("Sum is: %d\n", sum);
-	printf("Average is: %f", ((double) sum) / 10);
+
+	average /= (double) TOTAL_INPUTS;
+
+	printf("The sum of the positive numbers is: %d\n", sum);
+	printf("Average is: %f", average);
 
 	return EXIT_SUCCESS;
 }

@@ -10,7 +10,6 @@ int main() {
 		scanf("%d", &num);
 
 		unsigned int digit_sum = 0;
-
 		do {
 			digit_sum += num % 10;
 			num /= 10;

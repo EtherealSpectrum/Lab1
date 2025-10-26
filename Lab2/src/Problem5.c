@@ -21,5 +21,4 @@ int main() {
 	}
 
 	printf("Digit Sum: %d", digitSum);
-	printf("\n");
 }

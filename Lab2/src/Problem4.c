@@ -1,22 +1,37 @@
+/*
+ * Problem4.c
+ *
+ *  Created on: 24 Οκτ 2025
+ *      Author: Nikitas K.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
+#include <math.h>
+#define REPEAT 5
+
+unsigned int digits(unsigned int);
 
 int main() {
-	unsigned int num;
 	int i;
-	for (i = 0; i < 5; i++) {
+	for (i = 0; i < REPEAT; i++) {
 		printf("Insert a number: ");
+
+		unsigned int num;
 		scanf("%d", &num);
 
-		unsigned int digit_sum = 0;
-
-		do {
-			digit_sum += num % 10;
-			num /= 10;
-		} while (num != 0);
-
-		printf("Digit Sum: %d", digit_sum);
-		printf("\n");
+		char c = num > 9 ? 's' : '\u0000';
+		printf("%d has %d digit%c.\n\n", num, digits(num), c);
 	}
+
+	return EXIT_SUCCESS;
+}
+
+unsigned int digits(unsigned int num) {
+	unsigned int total_digits = 1;
+	while (num > 9) {
+		num /= 10;
+		total_digits++;
+	}
+	return total_digits;
 }

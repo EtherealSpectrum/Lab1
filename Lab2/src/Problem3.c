@@ -2,7 +2,7 @@
  * Problem3.c
  *
  *  Created on: 24 Οκτ 2025
- *      Author: nikht
+ *      Author: Nikitas K.
  */
 
 #include <stdio.h>
@@ -10,23 +10,26 @@
 #include <stdbool.h>
 
 int main() {
-	unsigned int num;
 	printf("Insert a number: ");
-	bool validNumber = true; // @suppress("Type cannot be resolved") // @suppress("Symbol is not resolved")
+
+	int num;
+	bool isValidNumber = true; // @suppress("Type cannot be resolved") @suppress("Symbol is not resolved")
 	do {
-		if (!validNumber)
+		if (!isValidNumber)
 			printf("Invalid number, insert again: ");
 		scanf("%d", &num);
-		validNumber = false; // @suppress("Symbol is not resolved")
+		isValidNumber = false; //@suppress("Symbol is not resolved")
 	} while (num < 2);
 
 	int i;
-	for (i = 2; i <= num / 2; i++) {
+	for (i = 2; i <= num / 2; i++)
 		if (num % i == 0) {
 			printf("Not Prime");
+
 			return EXIT_SUCCESS;
 		}
-	}
+
 	printf("Prime");
+
 	return EXIT_SUCCESS;
 }

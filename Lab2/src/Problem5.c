@@ -1,21 +1,25 @@
+/*
+ * Problem5.c
+ *
+ *  Created on: 24 Οκτ 2025
+ *      Author: Nikitas K.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 
 int main() {
+	printf("Insert a number: ");
+
 	unsigned int num;
-	int i;
-	for (i = 0; i < 5; i++) {
-		printf("Insert a number: ");
-		scanf("%d", &num);
+	scanf("%d", &num);
 
-		unsigned int digit_sum = 0;
-		do {
-			digit_sum += num % 10;
-			num /= 10;
-		} while (num != 0);
-
-		printf("Digit Sum: %d", digit_sum);
-		printf("\n");
+	unsigned int digitSum = 0;
+	while (num > 0) {
+		digitSum += num % 10;
+		num /= 10;
 	}
+
+	printf("Digit Sum: %d", digitSum);
+	printf("\n");
 }

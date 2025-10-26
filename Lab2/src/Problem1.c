@@ -1,35 +1,30 @@
 /*
- ============================================================================
- Name        : Problem1.c
- Author      : Nikitas K.
- Version     :
- Copyright   : MIT License
- Description :
- ============================================================================
+ * Problem1.c
+ *
+ *  Created on: 24 Οκτ 2025
+ *      Author: Nikitas K.
  */
 
 #include <stdio.h>
 #include <stdlib.h>
+
 #define TOTAL_INPUTS 3
 
-int main(void) {
-
-	int number, sum = 0;
-	double average = 0;
-
-	for (int i = 0; i < TOTAL_INPUTS; i++) {
+int main() {
+	int number, sumOfPositives = 0, sumOfNegatives = 0;
+	int i;
+	for (i = 0; i < TOTAL_INPUTS; i++) {
 		printf("Insert a number: ");
 		scanf("%d", &number);
-		average += number;
 
 		if (number > 0)
-			sum += number;
+			sumOfPositives += number;
+		else
+			sumOfNegatives += number;
 	}
-
-	average /= (double) TOTAL_INPUTS;
-
-	printf("The sum of the positive numbers is: %d\n", sum);
-	printf("Average is: %f", average);
+	printf("The sum of positives is: %d\n", sumOfPositives);
+	printf("The average of all inputs is: %f",
+			(sumOfPositives + sumOfNegatives) / (double) TOTAL_INPUTS);
 
 	return EXIT_SUCCESS;
 }

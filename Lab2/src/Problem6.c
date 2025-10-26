@@ -1,36 +1,43 @@
 /*
- * Problem5.c
+ * Problem6.c
  *
  *  Created on: 24 Οκτ 2025
- *      Author: nikht
+ *      Author: Nikitas K.
  */
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
+#include <math.h>
 
-int gcdEuclid(int, int);
+int gcd(int, int);
 
 int main() {
-	int m, n;
 	printf("Insert two numbers\n");
 
 	printf("Insert first number: ");
+	int m;
 	scanf("%d", &m);
 
 	printf("Insert second number: ");
+	int n;
 	scanf("%d", &n);
 
-	printf("The greatest common divisor of the two numbers is: %d", gcdEuclid(m,n));
+	printf("GCD(%d,%d) = %d", m, n, gcd(m, n));
+
+	return EXIT_SUCCESS;
 }
 
-int gcdEuclid(int m, int n) {
-	int r;
+//int gcd(int q, int d) {
+//	if (d == 0)
+//		return q;
+//	return gcd_recursion(d, q % d);
+//}
 
-	while (n != 0) {
-		r = m % n;
-		m = n;
-		n = r;
+int gcd(int q, int d) {
+	while (d != 0) {
+		int r = q % d;
+		q = d;
+		d = r;
 	}
-	return m;
+	return q;
 }

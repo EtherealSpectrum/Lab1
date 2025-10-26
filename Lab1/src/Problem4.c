@@ -2,31 +2,29 @@
  * Problem4.c
  *
  *  Created on: 18 Οκτ 2025
- *      Author: nikht
+ *      Author: Nikitas K.
  */
 
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
 
+#define TOTAL_NUMBERS 4
+
 int main() {
-	int num1, num2, num3, num4;
-	printf("Input the first number: ");
-	scanf("%d", &num1);
+	int sum = 0, sumOfSquares = 0, i;
+	for (i = 0; i < TOTAL_NUMBERS; i++) {
+		printf("Insert the number %d: ", i + 1);
+		int num;
+		scanf("%d", &num);
 
-	printf("Input the second number: ");
-	scanf("%d", &num2);
+		sum += num;
+		sumOfSquares += pow(num, 2);
+	}
 
-	printf("Input the third number: ");
-	scanf("%d", &num3);
-
-	printf("Input the fourth number: ");
-	scanf("%d", &num4);
-
-	printf("The average is: %f\n", (num1 + num2 + num3 + num4) / 4.0);
-	printf("The sum of squares is: %d",
-			(int) pow(num1, 2) + (int) pow(num2, 2) + (int) pow(num3, 2)
-					+ (int) pow(num4, 2));
+	printf("\n");
+	printf("Sum is: %d\n", sum);
+	printf("Sum of squares: %d", sumOfSquares);
 
 	return EXIT_SUCCESS;
 }

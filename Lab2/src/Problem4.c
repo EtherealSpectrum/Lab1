@@ -20,8 +20,7 @@ int main() {
 		unsigned int num;
 		scanf("%d", &num);
 
-		char c = num > 9 ? 's' : '\u0000';
-		printf("%d has %d digit%c.\n\n", num, digits(num), c);
+		printf(i < REPEAT - 1 ? "%d has %d digit%c.\n\n" : "%d has %d digit%c.", num, digits(num), num > 9 ? 's' : '\u0000');
 	}
 
 	return EXIT_SUCCESS;

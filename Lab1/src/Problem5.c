@@ -7,7 +7,6 @@
 
 #include<stdio.h>
 #include<stdlib.h>
-#include<math.h>
 
 int main() {
 	printf("Insert an integer number that has exactly 3 digits: ");
@@ -23,3 +22,4 @@ int main() {
 	printf("The sum of digits is %d", sum);
 	return EXIT_SUCCESS;
 }
+

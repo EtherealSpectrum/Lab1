@@ -7,19 +7,17 @@
 
 #include<stdio.h>
 #include<stdlib.h>
-#include<math.h>
-
-#define TOTAL_NUMBERS 4
 
 int main() {
+	const int TOTAL_NUMBERS = 4;
 	int sum = 0, sumOfSquares = 0, i;
 	for (i = 0; i < TOTAL_NUMBERS; i++) {
 		printf("Insert the number %d: ", i + 1);
-		int num;
-		scanf("%d", &num);
+		int n;
+		scanf("%d", &n);
 
-		sum += num;
-		sumOfSquares += pow(num, 2);
+		sum += n;
+		sumOfSquares += n * n;
 	}
 	printf("\nSum is: %d\nSum of squares: %d", sum, sumOfSquares);
 

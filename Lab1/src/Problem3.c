@@ -19,8 +19,7 @@ int main() {
 		printf(i == 0 ? "Insert the height of a triangle: " : "Insert the second perpendicular side of the right triangle: ");
 		scanf("%lf", &height);
 
-		if(i == 0)	printf("\nThe area of the triangle is: %f\n\n", base * height / 2.0);
-		else 		printf("\nThe hypotenuse is equal to: %f", sqrt(pow(base, 2) + pow(height, 2)));
+		printf(i == 0? "\nThe area of the triangle is: %f\n\n":"\nThe hypotenuse is equal to: %f", i == 0? base * height / 2.0: sqrt(pow(base, 2) + pow(height, 2)));
 	}
 
 	return EXIT_SUCCESS;

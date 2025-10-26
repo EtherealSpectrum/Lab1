@@ -10,29 +10,18 @@
 #include <math.h>
 
 int main() {
-	printf("Insert the base of a triangle: ");
-	double base;
-	scanf("%lf", &base);
+	for (int i = 0; i < 2; i++) {
+		double base, height;
 
-	printf("Insert the height of a triangle: ");
-	double height;
-	scanf("%lf", &height);
+		printf(i == 0 ? "Insert the base of a triangle: " : "Insert the first perpendicular side of the right triangle: ");
+		scanf("%lf", &base);
 
-	printf("\n");
-	printf("The area of the triangle is: %lf", base * height / 2.0);
-	printf("\n");
+		printf(i == 0 ? "Insert the height of a triangle: " : "Insert the second perpendicular side of the right triangle: ");
+		scanf("%lf", &height);
 
-	printf("Insert the first perpendicular side of the right triangle: ");
-	double side1; // Perpendicular sides of a right triangle
-	scanf("%lf", &side1);
-
-	printf("Insert the second perpendicular side of the right triangle: ");
-	double side2;
-	scanf("%lf", &side2);
-
-	printf("\n");
-	printf("The hypotenuse is equal to: %f",
-			sqrt(pow(side1, 2) + pow(side2, 2)));
+		if(i == 0)	printf("\nThe area of the triangle is: %f\n\n", base * height / 2.0);
+		else 		printf("\nThe hypotenuse is equal to: %f", sqrt(pow(base, 2) + pow(height, 2)));
+	}
 
 	return EXIT_SUCCESS;
 }

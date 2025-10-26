@@ -7,33 +7,24 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
-int gcd(int, int);
+unsigned int gcd(unsigned int, unsigned int);
 
 int main() {
-	printf("Insert two numbers\n");
-
-	printf("Insert first number: ");
+	printf("Insert number the first number: ");
 	int m;
 	scanf("%d", &m);
 
-	printf("Insert second number: ");
+	printf("Insert number the second number: ");
 	int n;
 	scanf("%d", &n);
 
-	printf("GCD(%d,%d) = %d", m, n, gcd(m, n));
+	printf("GCD(%d,%d) = %u", m, n, gcd(m < 0 ? -m : m, n < 0 ? -n : n));
 
 	return EXIT_SUCCESS;
 }
 
-//int gcd(int q, int d) {
-//	if (d == 0)
-//		return q;
-//	return gcd_recursion(d, q % d);
-//}
-
-int gcd(int q, int d) {
+unsigned int gcd(unsigned int q, unsigned int d) {
 	while (d != 0) {
 		int r = q % d;
 		q = d;

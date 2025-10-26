@@ -7,22 +7,20 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 
 int main() {
-	printf("Insert a number: ");
+	printf("Insert an integer number greater or equal than 2: ");
 
-	int num;
-	bool isValidNumber = true; // @suppress("Type cannot be resolved") @suppress("Symbol is not resolved")
-	do {
-		if (!isValidNumber)
-			printf("Invalid number, insert again: ");
+	unsigned int num;
+	while (1 == 1) {
 		scanf("%d", &num);
-		isValidNumber = false; //@suppress("Symbol is not resolved")
-	} while (num < 2);
+		if (num > 1)
+			break;
 
-	int i;
-	for (i = 2; i <= num / 2; i++)
+		printf("\n (Invalid number) Insert again a new number that meets the conditions: ");
+	}
+
+	for (int i = 2; i <= num / 2; i++)
 		if (num % i == 0) {
 			printf("Not Prime");
 

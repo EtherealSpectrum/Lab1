@@ -13,16 +13,12 @@
 unsigned int digits(unsigned int);
 
 int main() {
-	int i;
-	for (i = 0; i < REPEAT; i++) {
+	for (int i = 0; i < REPEAT; i++) {
 		printf("Insert a number: ");
-
-		unsigned int num;
+		int num;
 		scanf("%d", &num);
-
-		printf(i < REPEAT - 1 ? "%d has %d digit%c.\n\n" : "%d has %d digit%c.", num, digits(num), num > 9 ? 's' : '\u0000');
+		printf(i < REPEAT - 1 ? "%d has %u digit%c.\n\n" : "%d has %u digit%c.", num, digits(num < 0 ? -num : num), num > 9 ? 's' : '\u0000');
 	}
-
 	return EXIT_SUCCESS;
 }
 

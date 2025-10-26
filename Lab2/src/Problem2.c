@@ -14,15 +14,9 @@ int main() {
 	int number, evens = 0, i;
 	for (i = 0; i < TOTAL_INPUTS; i++) {
 		printf("Insert a number: ");
-
 		scanf("%d", &number);
-
-		if (number % 2 == 0)
-			evens++;
+		evens = number % 2 == 0 ? evens + 1 : evens;
 	}
-
-	printf("Evens are: %d\n", evens);
-	printf("Odds are: %d", TOTAL_INPUTS - evens);
-
+	printf("Evens are: %d\nOdds are: %d", evens, TOTAL_INPUTS - evens);
 	return EXIT_SUCCESS;
 }

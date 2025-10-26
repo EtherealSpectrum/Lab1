@@ -11,8 +11,7 @@
 #define TOTAL_DIGITS 3
 
 int main() {
-	printf("Insert an integer number that has exactly %d digits: ",
-			TOTAL_DIGITS);
+	printf("Insert an integer number that has exactly %d digits: ", TOTAL_DIGITS);
 	int num;
 	scanf("%d", &num);
 

@@ -11,8 +11,7 @@
 #define TOTAL_INPUTS 3
 
 int main() {
-	int number, sumOfPositives = 0, sumOfNegatives = 0;
-	int i;
+	int number, sumOfPositives = 0, sumOfNegatives = 0, i;
 	for (i = 0; i < TOTAL_INPUTS; i++) {
 		printf("Insert a number: ");
 		scanf("%d", &number);
@@ -22,9 +21,7 @@ int main() {
 		else
 			sumOfNegatives += number;
 	}
-	printf("The sum of positives is: %d\n", sumOfPositives);
-	printf("The average of all inputs is: %f",
-			(sumOfPositives + sumOfNegatives) / (double) TOTAL_INPUTS);
+	printf("The sum of positives is: %d\nThe average of all inputs is: %f", sumOfPositives, (sumOfPositives + sumOfNegatives) / (double) TOTAL_INPUTS);
 
 	return EXIT_SUCCESS;
 }

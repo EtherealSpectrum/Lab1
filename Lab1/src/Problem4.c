@@ -21,10 +21,7 @@ int main() {
 		sum += num;
 		sumOfSquares += pow(num, 2);
 	}
-
-	printf("\n");
-	printf("Sum is: %d\n", sum);
-	printf("Sum of squares: %d", sumOfSquares);
+	printf("\nSum is: %d\nSum of squares: %d", sum, sumOfSquares);
 
 	return EXIT_SUCCESS;
 }

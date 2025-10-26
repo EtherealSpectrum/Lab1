@@ -13,6 +13,8 @@
 int main() {
 	int number, evens = 0, i;
 	for (i = 0; i < TOTAL_INPUTS; i++) {
+		printf("Insert a number: ");
+
 		scanf("%d", &number);
 
 		if (number % 2 == 0)

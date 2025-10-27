@@ -9,7 +9,7 @@
 #include<stdlib.h>
 
 int main() {
-	const unsigned int TOTAL_NUMBERS = 4;
+	const unsigned int TOTAL_NUMBERS = 4; // Εναλλακτική είναι να χρησιμοποιήσουμε #define TOTAL_NUMBERS 4 έξω από τη συνάρτηση main.
 	int sum = 0, sumOfSquares = 0;
 	for (unsigned int i = 0; i < TOTAL_NUMBERS; i++) {
 		printf("Insert the number %d: ", i + 1);

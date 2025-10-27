@@ -9,9 +9,9 @@
 #include<stdlib.h>
 
 int main() {
-	const int TOTAL_NUMBERS = 4;
-	int sum = 0, sumOfSquares = 0, i;
-	for (i = 0; i < TOTAL_NUMBERS; i++) {
+	const unsigned int TOTAL_NUMBERS = 4;
+	int sum = 0, sumOfSquares = 0;
+	for (unsigned int i = 0; i < TOTAL_NUMBERS; i++) {
 		printf("Insert the number %d: ", i + 1);
 		int n;
 		scanf("%d", &n);
@@ -19,7 +19,7 @@ int main() {
 		sum += n;
 		sumOfSquares += n * n;
 	}
-	printf("\nSum is: %d\nSum of squares: %d", sum, sumOfSquares);
+	printf("\nAverage is: %f\nSum of squares: %d", ((double) sum) / TOTAL_NUMBERS, sumOfSquares);
 
 	return EXIT_SUCCESS;
 }

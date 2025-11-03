@@ -27,7 +27,14 @@ int main() {
 	return EXIT_SUCCESS;
 }
 
+/*
+ *  return -1 only if it's not defined. GCD(0,0) it's not defined.
+ */
 unsigned int gcd(unsigned int q, unsigned int d) {
+	if(q == 0 && d == 0) return -1
+	if (q == 0) return d;
+	if (d == 0) return q;
+
 	while (d > 0) {
 		unsigned int r = q % d;
 		q = d;

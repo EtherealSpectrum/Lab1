@@ -23,14 +23,14 @@ int main(void) {
 unsigned int fibonacci(unsigned int N) {
 	if (N < 3) return N > 1 ? 1 : 0; // if (N <= 2) return N == 2 ? 1 : 0;
 
-	unsigned int f_current = 1;
+	unsigned int current = 1;
 	{
-		unsigned int f_previous = 0;
+		unsigned int previous = 0;
 		for (unsigned int i = 2; i < N; i++) {
-			f_current += f_previous;
-			f_previous = f_current - f_previous;
+			current += previous;
+			previous = current - previous;
 		}
 	}
 
-	return f_current;
+	return current;
 }

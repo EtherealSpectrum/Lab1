@@ -1,4 +1,4 @@
-// ΚΑΚΟΥΛΛΗΣ 1117202500063 Παρασκευής 15:00–17:00 (Τμήμα 6).
+// ΚΑΚΟΥΛΛΗΣ ... Παρασκευής 15:00–17:00 (Τμήμα 6).
 
 // Στο ορολόγιο πρόγραμμα παρακάτω αναγράφεται ως Τμήμα 5 σε αντίθεση με το eClass που αναγράφεται ως Τμήμα 6.
 // https://www.dind.uoa.gr/spoydes/orologio_programma_kai_programma_exetaseon
@@ -66,3 +66,4 @@ inline unsigned int digital_root(int n, unsigned int base) {
 
 	return n - (base - 1) * ((n - 1) / (base - 1));
 }
+

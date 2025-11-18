@@ -12,7 +12,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define INPUTS 7
+#define INPUTS 10
 
 int main(void) {
 	double arr[INPUTS];

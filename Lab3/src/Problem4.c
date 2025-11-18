@@ -10,18 +10,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define SDT_DIGITS 9
+#define SDT 202500063
+
+unsigned int calculate(int);
 
 unsigned int fibonacci(unsigned int);
 
 int main(void) {
-	if(SDT_DIGITS < 1) return EXIT_FAILURE;
-	printf("The term %u of Fibonacci sequence is: %u\n", SDT_DIGITS, fibonacci(SDT_DIGITS));
+	if (calculate(SDT) < 1)
+		return EXIT_FAILURE;
+	printf("The term %u of Fibonacci sequence is: %u\n", calculate(SDT),
+			fibonacci(calculate(SDT)));
+
 	return EXIT_SUCCESS;
 }
 
 unsigned int fibonacci(unsigned int N) {
-	if (N < 3) return N > 1 ? 1 : 0; // if (N <= 2) return N == 2 ? 1 : 0;
+	if (N < 3)
+		return N > 1 ? 1 : 0; // if (N <= 2) return N == 2 ? 1 : 0;
 
 	unsigned int current = 1;
 	{
@@ -33,4 +39,8 @@ unsigned int fibonacci(unsigned int N) {
 	}
 
 	return current;
+}
+
+unsigned int calculate(int id) {
+	return (id % 10) + (id % 100) / 10;
 }
